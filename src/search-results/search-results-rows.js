@@ -1,6 +1,13 @@
-const SearchResultRow = ({house}) => {
-    const setActive = () => {};
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import "./search-results.css"
 
+const SearchResultRow = ({house}) => {
+
+    const history = useHistory();
+    const setActive = () => {
+        history.push(`/house/${house.id}`)
+    };
+   
     return ( 
         <tr onClick={setActive}>
             <td>{house.address}</td>
