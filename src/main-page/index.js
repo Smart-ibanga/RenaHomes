@@ -32,6 +32,7 @@ function App() {
       <div className="container">
         <Header subtitle="Providing houses all over the world" />
         <HouseFilter allHouses={allHouses} />
+        
         <Switch>
           <Route path="/searchresults/:country">
             <SearchResults allHouses={allHouses} />
